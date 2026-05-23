@@ -73,7 +73,7 @@ export function About() {
           className="mt-12 grid grid-cols-2 gap-4 md:grid-cols-4"
         >
           {[
-            { value: "3rd", label: "Year of CS at FAST-NUCES" },
+            { value: "3rd", label: "Year at FAST-NUCES" },
             { value: "14", label: "Projects built" },
             { value: "36", label: "Technologies" },
             { value: profile.location, label: "Based in" },
