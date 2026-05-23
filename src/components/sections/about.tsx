@@ -35,9 +35,7 @@ export function About() {
               }}
             />
             <p className="relative text-lg leading-relaxed text-bone-muted">
-              I&apos;m a passionate full-stack developer with a love for creating beautiful,
-              functional web experiences. With expertise in modern web technologies, I
-              specialize in building scalable applications that make a real impact.
+              {profile.bio[0]}
             </p>
           </motion.div>
 
@@ -58,8 +56,7 @@ export function About() {
               }}
             />
             <p className="relative text-lg leading-relaxed text-bone-muted">
-              When I&apos;m not coding, you&apos;ll find me exploring new technologies, contributing
-              to open-source projects, or sharing knowledge with the developer community.
+              {profile.bio[1]}
             </p>
           </motion.div>
         </div>

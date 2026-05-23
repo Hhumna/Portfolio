@@ -2,7 +2,7 @@ import { profile } from "./profile";
 
 export const seo = {
   title: profile.title,
-  description: profile.bio,
+  description: profile.bio.join(" "),
   keywords: [
     "portfolio",
     "software engineer",
