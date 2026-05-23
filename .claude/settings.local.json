@@ -11,7 +11,22 @@
       "Bash(npx tsc *)",
       "Bash(npx next *)",
       "Bash(git init *)",
-      "Bash(git add *)"
+      "Bash(git add *)",
+      "Bash(git commit *)",
+      "Bash(convert --version)",
+      "Bash(python3 -c \"from PIL import Image; print\\('PIL OK'\\)\")",
+      "Bash(curl -s --connect-timeout 5 https://fonts.googleapis.com)",
+      "Bash(NODE_OPTIONS='--dns-result-order=ipv4first' npx next build)",
+      "Bash(npm show *)",
+      "Bash(curl -s --connect-timeout 10 \"https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap\")",
+      "Bash(npm install *)",
+      "Bash(curl -s -A \"Mozilla/5.0 \\(Windows NT 10.0; Win64; x64\\) AppleWebKit/537.36\" \"https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,100..900&display=swap\")",
+      "Bash(curl -s -A 'Mozilla/5.0 \\(Windows NT 10.0; Win64; x64\\) AppleWebKit/537.36 \\(KHTML, like Gecko\\) Chrome/120.0.0.0 Safari/537.36' 'https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,100..900&display=swap')",
+      "Bash(curl -s -A 'Mozilla/5.0 \\(Windows NT 10.0; Win64; x64\\) AppleWebKit/537.36 \\(KHTML, like Gecko\\) Chrome/120.0.0.0 Safari/537.36' 'https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,100..900&display=swap&subset=latin' -v)",
+      "Bash(curl -s -A 'Mozilla/5.0 \\(Windows NT 10.0; Win64; x64\\) AppleWebKit/537.36 \\(KHTML, like Gecko\\) Chrome/120.0.0.0 Safari/537.36' https://fonts.gstatic.com/s/fraunces/v38/6NU78FyLNQOQZAnv9bYEvDiIdE9Ea92uemAk_WBq8U_9v0c2Wa0KxC9TeA.woff2 -o /home/hooms/Portfolio/src/fonts/fraunces-variable.woff2)",
+      "Bash(curl -s 'https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,100..900&display=swap' -H 'User-Agent: Mozilla/5.0 \\(X11; Linux x86_64\\) AppleWebKit/537.36')",
+      "Bash(curl *)",
+      "Bash(pkill -f \"next dev\")"
     ]
   }
 }

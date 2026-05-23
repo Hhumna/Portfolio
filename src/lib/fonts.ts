@@ -1,21 +1,22 @@
-import { Fraunces, Geist, Geist_Mono } from "next/font/google";
+import localFont from "next/font/local";
 
-export const fontDisplay = Fraunces({
-  subsets: ["latin"],
+export const fontDisplay = localFont({
+  src: "../../public/fonts/fraunces-variable.woff2",
   variable: "--font-display",
-  weight: "variable",
-  axes: ["opsz", "SOFT"],
   display: "swap",
+  weight: "100 900",
 });
 
-export const fontSans = Geist({
-  subsets: ["latin"],
+export const fontSans = localFont({
+  src: "../../node_modules/geist/dist/fonts/geist-sans/Geist-Variable.woff2",
   variable: "--font-sans",
   display: "swap",
+  weight: "100 900",
 });
 
-export const fontMono = Geist_Mono({
-  subsets: ["latin"],
+export const fontMono = localFont({
+  src: "../../node_modules/geist/dist/fonts/geist-mono/GeistMono-Variable.woff2",
   variable: "--font-mono",
   display: "swap",
+  weight: "100 900",
 });
