@@ -73,9 +73,9 @@ export function About() {
           className="mt-12 grid grid-cols-2 gap-4 md:grid-cols-4"
         >
           {[
-            { value: "3+", label: "Years building" },
-            { value: "20+", label: "Projects shipped" },
-            { value: "10+", label: "Technologies" },
+            { value: "3rd", label: "Year of CS at FAST-NUCES" },
+            { value: "14", label: "Projects built" },
+            { value: "36", label: "Technologies" },
             { value: profile.location, label: "Based in" },
           ].map((stat) => (
             <motion.div
