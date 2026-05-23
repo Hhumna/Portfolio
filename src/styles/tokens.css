@@ -1,0 +1,10 @@
+@layer utilities {
+  :root {
+    --token-primary: #7c3aed;
+    --token-secondary: #3b82f6;
+    --token-accent: #ec4899;
+    --token-background: #000000;
+    --token-foreground: #ffffff;
+    --token-muted: #6b7280;
+  }
+}

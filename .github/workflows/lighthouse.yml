@@ -1,0 +1,24 @@
+name: Lighthouse
+
+on:
+  # Vercel posts deployment_status events when a preview is ready — we audit it
+  deployment_status:
+
+jobs:
+  audit:
+    if: github.event.deployment_status.state == 'success'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Lighthouse CI
+        uses: treosh/lighthouse-ci-action@v12
+        with:
+          urls: |
+            ${{ github.event.deployment_status.target_url }}
+          uploadArtifacts: true
+          temporaryPublicStorage: true
+          configPath: ./.lighthouserc.json

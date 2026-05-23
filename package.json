@@ -1,0 +1,51 @@
+{
+  "name": "obsidian-portfolio",
+  "version": "1.0.0",
+  "description": "A modern portfolio site built with Next.js, TypeScript, Tailwind CSS, and shadcn/ui",
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint --max-warnings=0",
+    "lint:fix": "next lint --fix",
+    "type-check": "tsc --noEmit",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "analyze": "ANALYZE=true next build",
+    "preview": "next build && next start"
+  },
+  "dependencies": {
+    "@radix-ui/react-dialog": "^1.1.0",
+    "@radix-ui/react-dropdown-menu": "^2.1.0",
+    "@radix-ui/react-primitive": "^2.0.0",
+    "@radix-ui/react-tooltip": "^1.0.0",
+    "@vercel/og": "^0.6.0",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.0.0",
+    "cmdk": "^1.1.1",
+    "framer-motion": "^11.0.0",
+    "lucide-react": "^1.16.0",
+    "next": "^15.0.0",
+    "next-themes": "^0.4.6",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "sonner": "^1.0.0",
+    "tailwind-merge": "^2.0.0",
+    "tailwindcss": "^3.4.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/typography": "^0.5.19",
+    "@types/node": "^20.0.0",
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "autoprefixer": "^10.4.0",
+    "eslint": "^8.50.0",
+    "eslint-config-next": "^15.0.0",
+    "postcss": "^8.4.0",
+    "prettier": "^3.0.0",
+    "prettier-plugin-tailwindcss": "^0.5.0",
+    "tailwindcss": "^3.4.0",
+    "tailwindcss-animate": "^1.0.7",
+    "typescript": "^5.3.0"
+  }
+}

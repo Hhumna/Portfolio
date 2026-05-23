@@ -1,0 +1,107 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Dark-first. Light mode is intentionally not offered — this portfolio has a point of view. */
+    --background: 240 6% 4%;       /* #0A0A0B */
+    --foreground: 40 12% 90%;      /* warm bone */
+    --muted: 240 5% 12%;
+    --muted-foreground: 40 6% 65%;
+    --accent: 190 90% 55%;         /* cyan-blue luminance */
+    --accent-foreground: 240 6% 4%;
+    --border: 240 5% 14%;
+    --ring: 190 90% 55%;
+    --radius: 1rem;
+
+    --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+    --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
+  }
+
+  * { @apply border-border; }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-feature-settings: "ss01", "cv11", "calt";
+    background-image:
+      radial-gradient(ellipse 80% 50% at 50% -10%, hsl(var(--accent) / 0.08), transparent),
+      linear-gradient(180deg, hsl(var(--background)), hsl(240 6% 3%));
+    background-attachment: fixed;
+  }
+
+  /* Selection feels expensive */
+  ::selection { background: hsl(var(--accent) / 0.25); color: hsl(var(--foreground)); }
+
+  /* Custom scrollbar — thin, subtle */
+  ::-webkit-scrollbar { width: 10px; height: 10px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb { background: hsl(var(--border)); border-radius: 999px; }
+  ::-webkit-scrollbar-thumb:hover { background: hsl(var(--muted-foreground) / 0.3); }
+
+  /* Reduced motion — enforced globally */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@layer components {
+  /* The signature glass surface — used by GlassCard primitive */
+  .surface-glass {
+    @apply relative overflow-hidden rounded-2xl border border-white/[0.06] bg-white/[0.02] backdrop-blur-xl;
+    box-shadow:
+      inset 0 1px 0 0 hsl(0 0% 100% / 0.06),
+      0 1px 1px 0 hsl(0 0% 0% / 0.4),
+      0 24px 48px -16px hsl(0 0% 0% / 0.6);
+  }
+
+  /* Hairline divider with luminous center */
+  .divider-lume {
+    @apply h-px w-full;
+    background: linear-gradient(90deg, transparent, hsl(var(--border)) 20%, hsl(var(--accent) / 0.4) 50%, hsl(var(--border)) 80%, transparent);
+  }
+
+  /* Eyebrow label — used above every section heading */
+  .eyebrow {
+    @apply font-mono uppercase text-muted-foreground;
+    font-size: 0.75rem;
+    line-height: 1;
+    letter-spacing: 0.18em;
+  }
+}
+
+@layer utilities {
+  .text-balance { text-wrap: balance; }
+  .text-pretty { text-wrap: pretty; }
+
+  /* Grain — applied as a pseudo-element on body or hero */
+  .with-grain::after {
+    content: "";
+    position: absolute; inset: 0;
+    background-image: url("/grain.png");
+    opacity: 0.04;
+    mix-blend-mode: overlay;
+    pointer-events: none;
+  }
+
+  /* Focus ring that matches the aesthetic */
+  .focus-lume {
+    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background;
+  }
+
+  /* Hide native cursor when custom JS cursor is active */
+  .cursor-custom,
+  .cursor-custom * {
+    cursor: none !important;
+  }
+}
