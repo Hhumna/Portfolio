@@ -15,6 +15,7 @@ export const profile = {
     "Mobile Developer",
     "AI Engineer",
     "Systems Programmer",
+    "Graphic Designer",
   ],
   socials: {
     github: "https://github.com/Hhumna",

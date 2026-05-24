@@ -37,7 +37,7 @@ export function Contact() {
           className="flex flex-col items-center"
         >
           <motion.p variants={fadeUp} className="eyebrow mb-6">
-            05 — Get In Touch
+            06 — Get In Touch
           </motion.p>
 
           <motion.h2
