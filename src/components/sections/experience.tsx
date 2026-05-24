@@ -74,17 +74,19 @@ export function Experience() {
 
                   <p className="mt-4 text-sm leading-relaxed text-bone-muted">{exp.description}</p>
 
-                  <ul className="mt-4 space-y-2">
-                    {exp.highlights.map((highlight) => (
-                      <li
-                        key={highlight}
-                        className="flex items-start gap-2.5 text-sm text-bone-muted"
-                      >
-                        <span className="mt-[0.4rem] h-1 w-1 shrink-0 rounded-full bg-lume-500/50" />
-                        {highlight}
-                      </li>
-                    ))}
-                  </ul>
+                  {exp.highlights.length > 0 && (
+                    <ul className="mt-4 space-y-2">
+                      {exp.highlights.map((highlight) => (
+                        <li
+                          key={highlight}
+                          className="flex items-start gap-2.5 text-sm text-bone-muted"
+                        >
+                          <span className="mt-[0.4rem] h-1 w-1 shrink-0 rounded-full bg-lume-500/50" />
+                          {highlight}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
                 </div>
               </motion.div>
             ))}

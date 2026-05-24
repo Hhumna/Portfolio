@@ -28,9 +28,7 @@ export const experience: Experience[] = [
     },
     description:
       "Designing visual assets and marketing graphics for digital campaigns.",
-    highlights: [
-      "Designed visual assets and marketing graphics supporting digital campaigns",
-    ],
+    highlights: [],
   },
   {
     id: 3,
@@ -42,8 +40,6 @@ export const experience: Experience[] = [
     },
     description:
       "Produced promotional materials for client outreach and branding initiatives.",
-    highlights: [
-      "Created promotional materials for client outreach and branding initiatives",
-    ],
+    highlights: [],
   },
 ];
